@@ -21,3 +21,27 @@
 
     --clr-bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.5);
 }
+
+/* Genreal Styles */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: #909090;
+    padding: 10px;
+}
+
+button {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Class Styles */
+
+.background--wrap {
+    padding: 1em;
+}
