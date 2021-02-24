@@ -3,3 +3,21 @@
 *::after {
     box-sizing: border-box;
 }
+
+/* Custom Properties */
+
+:root {
+
+    --ff-primary: 'Noto Sans JP', sans-serif;
+
+    --fw-normal: 300;
+    --fw-bold: 900;
+
+    --clr-light: #fff;
+    --clr-dark: #000;
+    --clr-one: #909090;
+    --clr-two: #ff0000;
+    --clr-three: #1cec72;
+
+    --clr-bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.5);
+}
