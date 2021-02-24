@@ -10,26 +10,31 @@
     <title>Daily Note</title>
 </head>
 <body>
-    <div class="title">Daily Note</div>
+    <div class="background--wrap">
+        <div class="title">
+            <h1>Daily Note</h1>
+        </div>
 
-    <div class="top">
-        <div class="note--input">
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+        <div class="top">
+            <div class="note--input">
+                <textarea name="" id="" cols="40" rows="5" placeholder="enter note here"></textarea>
+            </div>
+            
             <button class="note--input__add" id="add--btn">Add Note</button>
             <button class="note--input__clear" id="clear--btn">Clear</button>
         </div>
-    </div>
 
-    <div class="bottom">
-        <ul class="note--container">
-            <li>
-                <div class="test--note">
-                    <p>test note</p>
-                    <button class="delete--btn">Remove</button>
-                    <button class="view--btn">View</button>
-                </div>
-            </li>
-        </ul>
+        <div class="bottom">
+            <ul class="note--container">
+                <li>
+                    <div class="test--note">
+                        <p>test note</p>
+                        <button class="delete--btn">Remove</button>
+                        <button class="view--btn">View</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
 </body>
 <script src="app.js"></script>
