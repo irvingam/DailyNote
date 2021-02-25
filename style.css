@@ -20,18 +20,19 @@
     --clr-three: #1cec72;
 
     --clr-bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.5);
-
-    --
 }
 
 /* Genreal Styles */
 
 body {
+    background-image: url(background-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: var(--ff-primary);
     display: flex;
     justify-content: center;
     margin: 0;
-    background-color: var(--clr-light);
     padding: 10px;
 }
 
@@ -43,6 +44,8 @@ body {
     font-size: 4rem;
     color: var(--clr-light);
     font-weight: var(--fw-bold);
+    background: #1cec72;
+    border-radius: 10px;
 }
 
 .background--wrap {
