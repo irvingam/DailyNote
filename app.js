@@ -1,5 +1,16 @@
-// Selectors
+                // Selectors //
+const addBtn = document.getElementById('add--btn')
+const clearBtn = document.getElementById('clear--btn')
 
-// Events
+const inputText = document.getElementById('text--input')
 
-// Functions
+                // Events //
+addBtn.addEventListener('click', addNote)
+clearBtn.addEventListener('click', () => {
+    inputText.value = ''
+})
+
+                // Functions //
+function addNote() {
+
+}
