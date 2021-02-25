@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" 
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" 
+    crossorigin="anonymous" />
+
     <title>Daily Note</title>
 </head>
 <body>
@@ -16,26 +20,20 @@
         </div>
 
         <div class="top">
-            <div class="note--input">
-                <textarea name="" id="" cols="40" rows="5" placeholder="enter note here"></textarea>
+            <div class="input--note">
+                <textarea class="note" cols="50" rows="5" placeholder="enter note here"></textarea>
             </div>
-            
-            <button class="note--input__add" id="add--btn">Add Note</button>
-            <button class="note--input__clear" id="clear--btn">Clear</button>
+            <div class="input--actions">
+                <button class="note--input__add" id="add--btn">Add Note</button>
+                <button class="note--input__clear" id="clear--btn">Clear</button>
+            </div>
         </div>
 
         <div class="bottom">
             <ul class="note--container">
-                <li>
-                    <div class="test--note">
-                        <p>test note</p>
-                        <button class="delete--btn">Remove</button>
-                        <button class="view--btn">View</button>
-                    </div>
-                </li>
             </ul>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
 </html>
