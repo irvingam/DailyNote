@@ -20,27 +20,30 @@
     --clr-three: #1cec72;
 
     --clr-bs: 0.25em 0.25em 0.75em rgba(0,0,0,0.5);
+
+    --
 }
 
 /* Genreal Styles */
 
 body {
+    font-family: var(--ff-primary);
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin: 0;
     background-color: var(--clr-light);
     padding: 10px;
 }
 
-button {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
 
 /* Class Styles */
+
+.title h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: var(--clr-light);
+    font-weight: var(--fw-bold);
+}
 
 .background--wrap {
     padding: 1em;
@@ -48,3 +51,35 @@ button {
     box-shadow: var(--clr-bs);
     height: 100vh;
 }
+
+.note {
+    border: none;
+    border-radius: 10px;
+}
+
+.input--actions {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.note--input__add,
+.note--input__clear {
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    background: var(--clr-one);
+    color: var(--clr-light);
+    padding: 10px;
+    transition: all 0.4s ease;
+}
+
+.note--input__add:hover,
+.note--input__clear:hover {
+    background: #1cec72;
+}
+
+.note--container {
+    display: flex;
+    list-style: none;
+}
+
