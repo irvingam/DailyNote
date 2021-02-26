@@ -15,6 +15,8 @@ document.addEventListener('keypress', (event) => {
 clearBtn.addEventListener('click', () => {
     inputText.value = ''
 })
+// action buttons event
+noteContainer.addEventListener('click', actionBtn)
 
                 // Functions //
 
@@ -30,18 +32,20 @@ function addNote() {
 
     const noteView = document.createElement('button')
     noteView.innerText = 'View'
-    noteView.classList = 'note--view-btn'
+    noteView.classList.add('note--view-btn')
     newNote.appendChild(noteView)
 
     const noteDelete = document.createElement('button')
     noteDelete.innerHTML = '<i class="fas fa-trash"></i>'
-    noteDelete.classList = 'note--delete-btn'
+    noteDelete.classList.add('note--delete-btn')
     newNote.appendChild(noteDelete)
 
     noteContainer.appendChild(newNote)
+
+    inputText.value = ''
 }
 
-function deleteBtn(e) {
+function actionBtn(e) {
     const item = e.target
 
     if(item.classList[0] === 'note--delete-btn') {
