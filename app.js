@@ -1,9 +1,18 @@
                 // Selectors //
+// button selectors
 const addBtn = document.getElementById('add--btn')
 const clearBtn = document.getElementById('clear--btn')
 
+// note selectors
 const inputText = document.getElementById('text--input')
 const noteContainer = document.getElementById('container')
+
+// modal selectors
+
+
+const modal = document.getElementById('modal')
+const modalClose = document.querySelector('.closebtn')
+
 
                 // Events //
 // click and press 'enter' 
@@ -11,12 +20,23 @@ addBtn.addEventListener('click', addNote)
 document.addEventListener('keypress', (event) => {
     if (event.keyCode === 13) {addNote()}
 })
+
 // clears input
 clearBtn.addEventListener('click', () => {
     inputText.value = ''
 })
+
 // action buttons event
 noteContainer.addEventListener('click', actionBtn)
+
+// close modal events
+modalClose.addEventListener('click', () => {
+    modal.style.display = 'none'
+})
+window.onclick = function(event) {
+    if(event.target == modal) {modal.style.display = 'none'}
+}
+
 
                 // Functions //
 
@@ -42,14 +62,25 @@ function addNote() {
 
     noteContainer.appendChild(newNote)
 
+    console.log(noteText.innerText)
+
     inputText.value = ''
 }
 
 function actionBtn(e) {
     const item = e.target
-
+    const note = item.parentElement
+    const text = document.querySelector('.note--text')
+    
+    // delete button
     if(item.classList[0] === 'note--delete-btn') {
-        const note = item.parentElement
         note.remove()
+    }
+    // view/modal button
+    
+    if(item.classList[0] === 'note--view-btn') {
+        let modalText = document.getElementById('modaltext')
+        modalText.innerText = text.innerText
+        modal.style.display = 'block'
     }
 }
