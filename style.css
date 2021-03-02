@@ -28,6 +28,7 @@ body {
     background-image: url(background-img.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     font-family: var(--ff-primary);
     display: flex;
@@ -44,7 +45,7 @@ body {
     font-size: 4rem;
     color: var(--clr-light);
     font-weight: var(--fw-bold);
-    background: #1cec72;
+    background: var(--clr-three);
     border-radius: 10px;
 }
 
@@ -52,7 +53,8 @@ body {
     padding: 1em;
     background-color: var(--clr-one);
     box-shadow: var(--clr-bs);
-    height: 100vh;
+    height: 100%;
+    border-radius: 10px;
 }
 
 .note {
@@ -78,11 +80,60 @@ body {
 
 .note--input__add:hover,
 .note--input__clear:hover {
-    background: #1cec72;
+    background: var(--clr-three);
 }
 
 .note--container {
     display: flex;
+    flex-direction: column;
     list-style: none;
+    color: var(--clr-light);
 }
 
+.note--new {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.note--new li {
+    flex: 1;
+}
+
+
+
+.note--modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal--content {
+    background: var(--clr-light);
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.closebtn {
+    color: var(--clr-light);
+    float: top;
+    font-size: 28px;
+    font-weight: var(--fw-bold);
+}
+
+.closebtn:hover,
+.closebtn:focus {
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+}
