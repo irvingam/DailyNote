@@ -8,8 +8,6 @@ const inputText = document.getElementById('text--input')
 const noteContainer = document.getElementById('container')
 
 // modal selectors
-
-
 const modal = document.getElementById('modal')
 const modalClose = document.querySelector('.closebtn')
 
@@ -51,7 +49,7 @@ function addNote() {
     newNote.appendChild(noteText)
 
     const noteView = document.createElement('button')
-    noteView.innerText = 'View'
+    noteView.innerHTML = '<i class="far fa-eye"></i>'
     noteView.classList.add('note--view-btn')
     newNote.appendChild(noteView)
 
@@ -70,17 +68,15 @@ function addNote() {
 function actionBtn(e) {
     const item = e.target
     const note = item.parentElement
-    const text = document.querySelector('.note--text')
-    
+
     // delete button
     if(item.classList[0] === 'note--delete-btn') {
         note.remove()
     }
     // view/modal button
-    
     if(item.classList[0] === 'note--view-btn') {
         let modalText = document.getElementById('modaltext')
-        modalText.innerText = text.innerText
+        modalText.innerText = note.innerText
         modal.style.display = 'block'
     }
 }
