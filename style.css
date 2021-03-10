@@ -107,6 +107,23 @@ body {
     max-width: 17ch;
 }
 
+.note--delete-btn,
+.note--view-btn {
+    background-color: var(--clr-one);
+    border: none;
+    border-radius: 5px;
+    color: var(--clr-light);
+    padding: 5px;
+    transition: all 0.4s ease;
+}
+
+.note--delete-btn:hover {
+    background-color: var(--clr-two);
+}
+
+.note--view-btn:hover {
+    background-color: var(--clr-three);
+}
 
 .note--modal {
     display: none;
