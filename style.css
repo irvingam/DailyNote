@@ -125,6 +125,11 @@ body {
     background-color: var(--clr-three);
 }
 
+.fa-eye,
+.fa-trash {
+    pointer-events: none;
+}
+
 .note--modal {
     display: none;
     position: fixed;
